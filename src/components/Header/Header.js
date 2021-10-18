@@ -5,7 +5,7 @@ import main_logo from '../../images/logo/main-logo.png'
 const Header = () => {
     return (
 
-        <div className="sticky top-0"	>
+        <div className="sticky top-0 z-50"	>
             <header className="text-gray-600 body-font bg-green-200 ">
                 <div className="container mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center ">
                     <div className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">

@@ -9,14 +9,14 @@ const Services = (props) => {
 
         <div >
             <section className="text-gray-600 body-font">
-                <div className="container px-5 pt-12 mx-auto">
+                <div className="container px-5 pt-8 mx-auto">
                     <div className="flex flex-col text-center w-full mb-1">
-                        <h1 className="sm:text-3xl text-2xl font-medium title-font mb-1 text-purple-800">Check Out Our  Services</h1>
+                        <h1 className="sm:text-3xl text-2xl font-medium title-font mb-1 text-green-700">Check Out Our  Services</h1>
                     </div>
                 </div>
             </section>
             <section className="text-gray-600 body-font">
-                <div className="container px-5 py-12 mx-auto">
+                <div className="container px-5 py-8 mx-auto">
                     <div className="flex flex-wrap -m-4">
                         {
                             services.map(service => <Service
@@ -25,6 +25,8 @@ const Services = (props) => {
                             ></Service>)
 
                         }
+
+
                     </div>
                 </div>
             </section>

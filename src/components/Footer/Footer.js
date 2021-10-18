@@ -19,7 +19,7 @@ const Footer = () => {
                         <div className="lg:w-2/3 md:w-1/3 w-full px-4">
                             <h2 className="title-font font-medium text-green-600 tracking-widest text-sm mb-3">Contact Us</h2>
                             <nav className="list-none mb-4">
-                                <p className="mt-2 text-sm text-gray-700">House #16, Road #02, Uttara, Dhaka-1230, Bangladesh
+                                <p className="mt-2 text-sm text-gray-700">Road #02, Sector #04, Uttara, Dhaka-1230, Bangladesh
                                 </p>
                                 <p className="mt-2 text-sm text-gray-700">Phone : 09621 123456, 09621 123457
                                 </p>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import banner2 from '../../images/banner/banner2.png'
 
 const Banner = () => {
@@ -11,9 +12,11 @@ const Banner = () => {
 
                             <br className="hidden lg:inline-block" />about your health today?
                         </h1>
-                        <p className="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
+                        <p className="mb-8 leading-relaxed">Check your symptoms and find out what could be causing them. It's fast, free and anonymous.</p>
                         <div className="flex justify-center">
-                            <button className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">Start Checkup</button>
+                            <button className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
+                                <NavLink to="/services">Start Checkup</NavLink>
+                            </button>
                         </div>
                     </div>
                     <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">

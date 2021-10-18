@@ -18,13 +18,12 @@ const FeaturedServices = () => {
             <div>
                 <section className="text-gray-600 body-font">
                     <div className="container px-5 py-12 mx-auto">
-                        <NavLink to="/courses" className="flex flex-wrap -m-4">
+                        <NavLink to="/services" className="flex flex-wrap -m-4">
                             {
                                 services.slice(0, 6).map(service => <Service
                                     key={service.id}
                                     service={service}
                                 ></Service>)
-
                             }
 
                         </NavLink>
