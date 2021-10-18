@@ -1,8 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import main_logo from '../../images/logo/main-logo.png'
+import useAuth from '../../hooks/useAuth';
+
 
 const Header = () => {
+    const { user, logOut } = useAuth();
+
     return (
 
         <div className="sticky top-0 z-50"	>
@@ -47,6 +51,12 @@ const Header = () => {
                             <path d="M5 12h14M12 5l7 7-7 7"></path>
                         </svg>
                     </button>
+                    {user?.email ?
+                        <button onClick={logOut} variant="light">Logout</button> :
+                        <NavLink to="/login">Login</NavLink>}
+                    <span>
+                        Signed in as: <a href="#login">{user?.displayName}</a>
+                    </span>
                 </div>
             </header>
         </div>
