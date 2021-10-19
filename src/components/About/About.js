@@ -19,37 +19,37 @@ const About = () => {
                     </div>
                 </div>
             </section>
-            <section class="text-gray-600 body-font">
-                <div class="container px-5 py-24 mx-auto flex flex-wrap">
-                    <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
-                        <img alt="feature" class="object-cover object-center h-full w-full" src={goal_objective} />
+            <section className="text-gray-600 body-font">
+                <div className="container px-5 py-24 mx-auto flex flex-wrap">
+                    <div className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+                        <img alt="feature" className="object-cover object-center h-full w-full" src={goal_objective} />
                     </div>
-                    <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
-                        <div class="flex flex-col mb-10 lg:items-start items-center">
-                            <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-green-100 text-green-500 mb-5">
-                                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" class="w-6 h-6" viewBox="0 0 24 24">
+                    <div className="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
+                        <div className="flex flex-col mb-10 lg:items-start items-center">
+                            <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-green-100 text-green-500 mb-5">
+                                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-6 h-6" viewBox="0 0 24 24">
                                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                                 </svg>
                             </div>
-                            <div class="flex-grow">
-                                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Our Goal</h2>
-                                <p class="leading-relaxed text-base">To establish a referral Diagnostic and Medical Services Centre.
+                            <div className="flex-grow">
+                                <h2 className="text-gray-900 text-lg title-font font-medium mb-3">Our Goal</h2>
+                                <p className="leading-relaxed text-base">To establish a referral Diagnostic and Medical Services Centre.
 
                                 </p>
 
                             </div>
                         </div>
 
-                        <div class="flex flex-col mb-10 lg:items-start items-center">
-                            <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-green-100 text-green-500 mb-5">
-                                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" class="w-6 h-6" viewBox="0 0 24 24">
+                        <div className="flex flex-col mb-10 lg:items-start items-center">
+                            <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-green-100 text-green-500 mb-5">
+                                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-6 h-6" viewBox="0 0 24 24">
                                     <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
                                     <circle cx="12" cy="7" r="4"></circle>
                                 </svg>
                             </div>
-                            <div class="flex-grow">
-                                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Our Objective</h2>
-                                <p class="leading-relaxed text-base">
+                            <div className="flex-grow">
+                                <h2 className="text-gray-900 text-lg title-font font-medium mb-3">Our Objective</h2>
+                                <p className="leading-relaxed text-base">
                                     <li>To render the world standard diagnostic service to the people of the country at an affordable cost and in turn to limit the outflow of the patient abroad at the expense of heard earn foreign currency by providing quality diagnostic services.</li>
                                     <li>Out door basis treatment by renowned General Practitioners, Consultants and Professors in different medical fields.</li>
                                     <li>To promote Health Education & Medical Services.</li>
