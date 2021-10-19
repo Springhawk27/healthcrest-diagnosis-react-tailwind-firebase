@@ -18,7 +18,7 @@ const Booking = () => {
         // console.log(bookingDetail)
         // console.log('asaf', serviceId)
 
-    }, [services])
+    }, [services, serviceId])
 
     return (
 

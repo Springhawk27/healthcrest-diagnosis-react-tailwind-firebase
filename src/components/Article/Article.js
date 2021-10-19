@@ -16,7 +16,6 @@ const Article = () => {
                             <br className="hidden lg:inline-block" /> need to know about
                             <br className="hidden lg:inline-block" /> COVID-19
                         </h1>
-                        <p className="mb-4 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
                         <NavLink to="/articledetail" className="flex justify-center">
                             <button className="inline-flex text-blue-800  border-0 py-2  focus:outline-none hover:text-green-700 rounded text-lg">Read here</button>
 

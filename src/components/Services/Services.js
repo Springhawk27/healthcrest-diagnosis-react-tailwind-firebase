@@ -23,10 +23,7 @@ const Services = (props) => {
                                 key={service.id}
                                 service={service}
                             ></Service>)
-
                         }
-
-
                     </div>
                 </div>
             </section>

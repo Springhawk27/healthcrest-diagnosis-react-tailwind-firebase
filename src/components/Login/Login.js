@@ -37,20 +37,7 @@ const Login = () => {
     }
 
 
-    // const handleRegistration = (event) => {
-    //     // console.log(name, email, password)
-    //     createUserWithEmailAndPassword(auth, displayName, email, password)
-    //         .then((result) => {
-    //             const user = result.user;
-    //             console.log(user)
-    //         })
-    //     // .catch((error) => {
-    //     //     const errorCode = error.code;
-    //     //     const errorMessage = error.message;
-    //     //     // ..
-    //     // });
-    //     event.preventDefault();
-    // }
+
 
     const handleSignin = (event) => {
         signInWithEmailAndPassword(auth, email, password)
@@ -59,10 +46,7 @@ const Login = () => {
                 const user = userCredential.user;
 
             })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-            });
+
         event.preventDefault();
 
     }
@@ -72,9 +56,7 @@ const Login = () => {
             <div className="container mx-auto px-5 py-8 flex items-center  justify-center flex-col ">
                 <h2 className="text-green-700 font-bold text-xl">Sign in to your Account</h2>
                 <form onSubmit={handleSignin} className="object-center w-1/3  text-left">
-                    {/* <label htmlFor="name" className="mr-2 ">Name</label><br />
-                    <input onBlur={handleNameChange} type="text" name="name" className="border-1 border-green-200 w-full rounded" placeholder="Your Name" required />
-                    <br /> */}
+
                     <label htmlFor="email" className="mr-2 ">Email</label><br />
                     <input onBlur={handleEmailChange} type="text" name="email" className="border-1 border-green-200 w-full rounded" placeholder="Your Email" required />
                     <br />
