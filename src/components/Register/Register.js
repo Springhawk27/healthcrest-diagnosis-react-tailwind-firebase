@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import useAuth from '../../hooks/useAuth';
-import { signInWithEmailAndPassword } from "firebase/auth";
 import { useHistory, useLocation } from 'react-router';
+import useAuth from '../../hooks/useAuth';
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { NavLink } from 'react-router-dom';
 
-// import LoginComponent from './LoginComponent';
 
-const Login = () => {
+const Register = () => {
     const { auth, signInUsingGoogle } = useAuth();
 
     const [displayName, setDisplayName] = useState('');
@@ -37,44 +36,31 @@ const Login = () => {
     }
 
 
-    // const handleRegistration = (event) => {
-    //     // console.log(name, email, password)
-    //     createUserWithEmailAndPassword(auth, displayName, email, password)
-    //         .then((result) => {
-    //             const user = result.user;
-    //             console.log(user)
-    //         })
-    //     // .catch((error) => {
-    //     //     const errorCode = error.code;
-    //     //     const errorMessage = error.message;
-    //     //     // ..
-    //     // });
-    //     event.preventDefault();
-    // }
-
-    const handleSignin = (event) => {
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-
-                const user = userCredential.user;
-
+    const handleRegistration = (event) => {
+        // console.log(name, email, password)
+        createUserWithEmailAndPassword(auth, displayName, email, password)
+            .then((result) => {
+                const user = result.user;
+                console.log(user)
             })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-            });
+        // .catch((error) => {
+        //     const errorCode = error.code;
+        //     const errorMessage = error.message;
+        //     // ..
+        // });
         event.preventDefault();
-
     }
+
+
 
     return (
         <div>
             <div className="container mx-auto px-5 py-8 flex items-center  justify-center flex-col ">
-                <h2 className="text-green-700 font-bold text-xl">Sign in to your Account</h2>
-                <form onSubmit={handleSignin} className="object-center w-1/3  text-left">
-                    {/* <label htmlFor="name" className="mr-2 ">Name</label><br />
+                <h2 className="text-green-700 font-bold text-xl">Sign up a new account</h2>
+                <form onSubmit={handleRegistration} className="object-center w-1/3  text-left">
+                    <label htmlFor="name" className="mr-2 ">Name</label><br />
                     <input onBlur={handleNameChange} type="text" name="name" className="border-1 border-green-200 w-full rounded" placeholder="Your Name" required />
-                    <br /> */}
+                    <br />
                     <label htmlFor="email" className="mr-2 ">Email</label><br />
                     <input onBlur={handleEmailChange} type="text" name="email" className="border-1 border-green-200 w-full rounded" placeholder="Your Email" required />
                     <br />
@@ -85,11 +71,11 @@ const Login = () => {
                 </form>
             </div>
             <br />
-            <p>New to Healthcrest? <NavLink to="/register" className="text-blue-600 font-bold">Create  an Account</NavLink></p>
+            <p>Already have an account? <NavLink to="/login" className="text-blue-600 font-bold">Log in</NavLink></p>
             <div>Or</div>
             <button onClick={handleGoogleLogIn} className="bg-yellow-300 px-3 py-2 mt-2">Google Sign In</button>
         </div>
     );
 };
 
-export default Login;
+export default Register;
