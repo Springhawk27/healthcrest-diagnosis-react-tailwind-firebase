@@ -46,17 +46,25 @@ const Header = () => {
                             to="/contact"
                             className="mr-5 hover:text-green-700">Contact</NavLink>
                     </nav>
-                    <button className="inline-flex items-center bg-green-400 border-0 py-1 px-3 focus:outline-none hover:bg-green-500 rounded text-white mt-4 md:mt-0">Button
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
-                            <path d="M5 12h14M12 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
+
+                    {
+                        user?.email && <span>
+                            <NavLink to="/profile" className="mr-5 text-blue-600 font-bold"> {user?.name} </NavLink>
+                        </span>
+                    }
+
                     {user?.email ?
-                        <button onClick={logOut} variant="light">Logout</button> :
-                        <NavLink to="/login">Login</NavLink>}
-                    <span>
-                        Signed in as: <a href="#login">{user?.displayName}</a>
-                    </span>
+
+                        <button onClick={logOut} variant="light" className="inline-flex items-center bg-green-400 border-0 py-1 px-3 focus:outline-none hover:bg-green-500 rounded text-white mt-4 md:mt-0">Logout
+                            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </button> :
+                        <NavLink to="/login" className="inline-flex items-center bg-green-400 border-0 py-1 px-3 focus:outline-none hover:bg-green-500 rounded text-white mt-4 md:mt-0">Login
+
+                        </NavLink>}
+
+
                 </div>
             </header>
         </div>
