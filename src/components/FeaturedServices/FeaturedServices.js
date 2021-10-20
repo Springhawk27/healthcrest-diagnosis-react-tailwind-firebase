@@ -10,7 +10,7 @@ const FeaturedServices = () => {
         <div>
             <section className="text-gray-600 body-font">
                 <div className="container px-5 pt-12 mx-auto">
-                    <div className="flex flex-col text-center w-full mb-1">
+                    <div className="flex flex-col text-center w-full mb-1 ">
                         <h1 className="sm:text-3xl text-2xl font-medium title-font mb-1 text-green-700">We provide the below diagnosis and many more</h1>
                     </div>
                 </div>
