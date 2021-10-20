@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
 import { useState } from "react";
 import { useHistory, useLocation } from "react-router";
 import { getAuth } from "firebase/auth";
@@ -9,7 +9,8 @@ import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
 
-    const { auth, signInUsingGoogle } = useAuth();
+
+    const { signInUsingGoogle } = useAuth();
 
 
     const [name, setName] = useState('');
@@ -62,10 +63,7 @@ const Login = () => {
             setError('Password must contain 3 lowercase');
             return;
         }
-        // if (email) {
-        //     setError('Email already in use')
-        //     return
-        // }
+
 
 
         isLogIn ? processLogIn(email, password) : createNewUser(name, email, password);
@@ -80,11 +78,11 @@ const Login = () => {
             .then((userCredential) => {
                 history.push(redirect_uri)
 
-                const user = userCredential.user;
+                // const user = userCredential.user;
                 setError('');
             })
             .catch((error) => {
-                const errorMessage = error.message;
+                setError(error.message);
             });
     }
 
@@ -97,7 +95,7 @@ const Login = () => {
             .then((userCredential) => {
                 history.push(redirect_uri)
 
-                const user = userCredential.user;
+                // const user = userCredential.user;
 
 
 
@@ -109,18 +107,7 @@ const Login = () => {
     }
 
 
-    const setUserName = () => {
-        const testAuth = getAuth();
 
-        updateProfile(testAuth.currentUser, {
-            displayName: name,
-        }).then((result) => {
-            // Profile updated!
-            // ...
-        }).catch((error) => {
-
-        });
-    }
 
 
 
@@ -132,8 +119,9 @@ const Login = () => {
 
             })
             .catch((error) => {
-                const errorMessage = error.message;
-                // ..
+                setError(error.message);
+
+
             });
     }
 

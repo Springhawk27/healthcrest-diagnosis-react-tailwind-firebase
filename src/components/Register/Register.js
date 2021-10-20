@@ -47,7 +47,7 @@ const Register = () => {
         // console.log(name, email, password)
         createUserWithEmailAndPassword(auth, displayName, email, password)
             .then((userCredential) => {
-                const user = userCredential.user;
+                // const user = userCredential.user;
             })
 
         event.preventDefault();
