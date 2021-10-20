@@ -13,20 +13,7 @@ const useFirebase = () => {
 
 
 
-    // const createNewUser = (email, password) => {
-    //     createUserWithEmailAndPassword(auth, email, password)
-    //         .then((userCredential) => {
-    //             // Signed in 
-    //             const user = userCredential.user;
-    // ...
-    // console.log(user)
-    // setError('');
-    // verifyEmail();
-    // })
-    //   .catch(error => {
-    //     setError(error.message);
-    //   })
-    // }
+
 
 
     const signInUsingGoogle = () => {
@@ -47,6 +34,8 @@ const useFirebase = () => {
 
 
     }
+
+
 
     // observe user state change
     useEffect(() => {

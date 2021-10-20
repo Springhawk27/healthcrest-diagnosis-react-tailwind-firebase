@@ -3,9 +3,16 @@ import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { NavLink } from 'react-router-dom';
+import initializeAuthentication from '../Firebase/firebase.init';
 
+
+initializeAuthentication();
 
 const Register = () => {
+
+
+
+
     const { auth, signInUsingGoogle } = useAuth();
 
     const [displayName, setDisplayName] = useState('');
@@ -39,8 +46,8 @@ const Register = () => {
     const handleRegistration = (event) => {
         // console.log(name, email, password)
         createUserWithEmailAndPassword(auth, displayName, email, password)
-            .then((result) => {
-                const user = result.user;
+            .then((userCredential) => {
+                const user = userCredential.user;
             })
 
         event.preventDefault();
