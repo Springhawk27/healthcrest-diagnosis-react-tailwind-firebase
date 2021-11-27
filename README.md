@@ -6,6 +6,11 @@ live link: https://healthcrest-diagnosis.web.app/
 
 ## This Project consists of:
 
+-	A simple and responsive React website where one can check and book for diagnosis
+-	Firebase authentication added for registration, sign in and google sign in. 
+-	Developed with custom hook and api.
+
+
 - HTML
 - CSS
 - Javascript
